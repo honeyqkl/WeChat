@@ -1,0 +1,13 @@
+<template name = "starsTemplate">
+  <view class="stars-container">
+    <view class="stars">
+      <block wx:for="{{stars}}" wx:for-item="i">
+      <!-- 如果i等于1使用实心图片 如果i不为1为虚心 -->
+        <image wx:if="{{i}}" src="/images/icon/star.png"></image>
+        <image wx:else src="/images/icon/none-star.png"></image>
+      </block>
+    </view>
+    
+    <view class="star-score">{{score}}分</view>
+  </view>
+</template>
